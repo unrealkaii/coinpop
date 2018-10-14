@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
+import CoinItem from './CoinItem';
 
 class CoinList extends Component {
+   
     render() {
-       return (
+      const coinlist = this.props.list.map(item => {
+          return <CoinItem key={item.rank} item={item}/>
+      });
+
+      return (
         <div className="Coinlist">
         <table>
+        <tbody>
             <tr>
                 <th>Rank</th>
                 <th>Name</th>
@@ -13,9 +20,11 @@ class CoinList extends Component {
                 <th>24hr Volume ($)</th>
                 <th>Price ($)</th>
             </tr>
+            {coinlist}
+            </tbody>
         </table>
         </div>
-       )
+       );
     }
 }
 
