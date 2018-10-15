@@ -10,9 +10,9 @@ class CoinItem extends Component {
                 <td>{item.rank}</td>
                 <td>{item.name}</td>
                 <td>{item.symbol}</td>
-                <td>{item.market_cap}</td>
-                <td>{item.volume_24h}</td>
-                <td>{item.price}</td>
+                <td>{Number(item.market_cap).toFixed(2)}</td>
+                <td>{Number(item.volume_24h).toFixed(2)}</td>
+                <td>{Number(item.price).toFixed(2)}</td>
             </tr>
         );
     }
