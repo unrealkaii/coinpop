@@ -10,7 +10,7 @@ class App extends Component {
     };
   }
 
-  // https://coinlib.io/api/v1/coinlist?key=5d4da07f0f59e7a9&page=1&order=rank_asc
+  
   componentDidMount(){
     fetch('https://coinlib.io/api/v1/coinlist?key=5d4da07f0f59e7a9&page=1&order=rank_asc')
      .then(response => {
@@ -25,7 +25,7 @@ class App extends Component {
     
     return (
       <div className="App">
-        <header className="App-header App-logo">
+        <header className="App-header">
           <h1>Coin Pop</h1>
         </header>
         <Coinlist list={this.state.coinlist} />
